@@ -1,12 +1,32 @@
+import cn from "classnames";
+import { ButtonHTMLAttributes, ReactNode } from "react";
+import s from "./Button.modules.css";
 import React from "react";
-import "./Button.scss";
 
-export interface ButtonProps extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>{
-  label: string;
-}
-
-const Button = ({label, ...others}: ButtonProps) => {
-  return <button {...others}>{label}</button>;
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  className?: string;
+  children?: ReactNode;
+  icon?: ReactNode;
+  label?: string;
 };
 
-export default Button;
+export function Button({
+  label,
+  className,
+  children,
+  icon,
+  ...props
+}: ButtonProps) {
+  return (
+    <button
+      className={cn(s.box, className, {
+        [s.iconBox]: !children,
+      })}
+      {...props}
+    >
+      {icon}
+      {children}
+      {label}
+    </button>
+  );
+}

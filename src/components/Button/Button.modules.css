@@ -1,0 +1,32 @@
+.box {
+  box-sizing: border-box;
+  padding: 8px 24px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  background: #24272c;
+  color: white;
+  box-shadow: 1px 2px 2px 0px rgba(255, 255, 255, 0.25) inset,
+    16px 20px 32px 0px rgba(0, 0, 0, 0.19);
+}
+
+.box:hover {
+  box-shadow: 1.4px 2.4px 2.4px 0px rgba(255, 255, 255, 0.304) inset,
+    16px 20px 32px 0px rgba(0, 0, 0, 0.324);
+}
+
+.box:active {
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25) inset,
+    -2px -2px 4px 0px rgba(255, 255, 255, 0.25) inset;
+}
+
+.box svg {
+  height: 16px;
+  width: 16px;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

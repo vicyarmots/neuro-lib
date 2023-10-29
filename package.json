@@ -1,5 +1,5 @@
 {
-  "name": "@MidoAhmed/rollup-react-library-starter",
+  "name": "rollup-lib",
   "version": "0.1.0",
   "description": "Template and quick-starter to create modern React libraries using Rollup.",
   "main": "dist/cjs/bundle.js",
@@ -8,9 +8,6 @@
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/MidoAhmed"
-  },
   "scripts": {
     "build": "rimraf dist && rollup -c",
     "dev": "rollup -c -w",
@@ -21,11 +18,7 @@
     "predeploy-storybook": "npm run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MidoAhmed/rollup-react-library-starter.git"
-  },
-  "author": "MidoAhmed",
+  "author": "vicneverthere",
   "license": "MIT",
   "keywords": [
     "react-template",
@@ -34,12 +27,7 @@
     "react",
     "template"
   ],
-  "bugs": {
-    "url": "https://github.com/MidoAhmed/rollup-react-library-starter/issues"
-  },
-  "homepage": "https://MidoAhmed.github.io/rollup-react-library-starter",
   "peerDependencies": {
-    "antd": "^5.4.0",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
@@ -82,7 +70,13 @@
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.61.0",
     "storybook": "^7.0.2",
+    "storybook-css-modules": "^1.0.8",
     "tslib": "^2.5.0",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2",
+    "css-loader-shorter-classnames": "^2.0.1",
+    "sass-loader": "^13.3.2"
   }
 }
